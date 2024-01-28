@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("white-cloud-sky.jpg");
+    background-position: center;
+    background-size: cover;
+    /* animation */
+    -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+    
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+}
+@-webkit-keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+
+}
+.wholeContainer{
+    background-color: rgba(101, 194, 186, .1);
+    backdrop-filter: blur(30px);
+    width: 400px;
+    height: 555px;
+    position: relative;
+    padding:20px;
+    border-radius:16px;
+    color:#fff;
+}
+.searchBox{
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 55px;
+    position: relative;
+    /* background-color: rgb(164, 119, 216); */
+    /* margin-top: 50px; */
+}
+.searchBox i{
+    font-size: 28px;
+    left:10px;
+    position: absolute;
+    color:#fff;
+}
+.searchBox input{
+    position: absolute;
+    width:100%;
+    height:100%;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255, .2);
+    font-size: 22px;
+    color: #fff;
+    font-weight:500;
+    text-transform: uppercase;
+    padding: 0 48px 0 42px;
+}
+.searchBox input::placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+.searchBox button{
+    position: absolute;
+    right:0;
+    font-size: 28px;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    padding: 0 40px 0 5px;
+    cursor:pointer;
+    color: #fff;
+}
+.weatherBox{
+    text-align: center;
+    margin: 40px 0;
+}
+.weatherBox img{
+    width: 60%;
+}
+.weatherBox .temperature{
+    position: relative;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 20px 0 6px -30px;
+}
+.weatherBox .temperature span{
+    position: absolute;
+    font-size: 24px;
+    margin-left:4px;
+    /* color: gray; */
+}
+.weatherBox .description{
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.weatherDetails{
+    display: flex;
+    width:100%;
+    position: absolute;
+    bottom: 40px;
+    left:0;
+    padding: 0 20px;
+}
+.weatherDetails .humidity,
+.weatherDetails .windy{
+    display: flex;
+    align-items: center;
+    /* width: 50%; */
+}
+.weatherDetails .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.weatherDetails .windy{
+    padding-left:60px;
+    justify-content: flex-end;
+}
+.weatherDetails i{
+    font-size: 56px;
+    margin-right: 10px;
+}
+.weatherDetails span{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+.weatherDetails p{
+    font-size: 14px;
+    font-weight: 500;
+}
