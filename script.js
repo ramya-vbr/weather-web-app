@@ -34,6 +34,8 @@ searchBox.addEventListener("click", () => {
           break;
         case "Mist":
           image.src = "images/mist.jpg";
+        case "Haze":
+          image.src = "image/mist.jpg";
         default:
           image.src = "images/clearsun.jpg";
       }
